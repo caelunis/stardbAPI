@@ -5,17 +5,18 @@ import SwapiService from "../../services/swapi-service";
 import Spinner from "../spinner";
 
 export default class ItemList extends Component {
-    swapiService = new SwapiService();
+
+    swapiService = new SwapiService()
 
     state = {
-        peopleList: []
+        peopleList: null
     }
 
     componentDidMount() {
         this.swapiService
             .getAllPeople()
             .then((peopleList) => {
-                this.setState({peopleList})
+                this.setState({ peopleList })
             })
     }
 
