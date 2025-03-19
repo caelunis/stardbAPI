@@ -5,7 +5,7 @@ import ItemDetails, { Record } from '../item-details/item-details';
 
 import './people-page.css';
 import SwapiService from "../../services/swapi-service";
-import Row from "../Row";
+import Row from "../row";
 import ErrorBoundary from "../error-boundary";
 
 
@@ -26,11 +26,8 @@ export default class PeoplePage extends Component {
         const {
             getPerson,
             getAllPeople,
-            getStarship,
-            getPlanet,
-            getPersonImage,
-            getStarshipImage,
-            getPlanetImage } = this.swapiService
+            getPersonImage
+        } = this.swapiService
 
         const itemList = (
             <ItemList onItemSelected={this.onItemSelected} getData={getAllPeople}>
